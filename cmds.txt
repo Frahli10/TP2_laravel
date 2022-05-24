@@ -1,0 +1,21 @@
+1 - composer create-project laravel/laravel laravel-app
+
+2 - php artisan make:model MaisonneuveEtudiant
+    php artisan make:model Ville
+
+
+3 - php artisan make:migration create_MaisonneuveEtudiant_table --create=MaisonneuveEtudiants
+    php artisan make:migration create_Ville_table --create=Villes
+
+4 . php artisan make:factory VilleFactory --model=Ville
+    php artisan make:seed VilleTableSeeder
+    php artisan db:seed --class=VilleTableSeeder
+
+5. php artisan make:factory MaisonneuveEtudiantFactory --model=MaisonneuveEtudiant
+   php artisan make:seed EtudiantTableSeeder
+   php artisan db:seed --class=EtudiantTableSeeder
+
+6. php artisan make:controller MaisonneuveEtudiantController
+   php artisan make:controller VilleController
+
+
